@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let greetings = "Hello Nischal";
+console.log(greetings);
+let num = 324234;
+console.log(num);
+let num1 = 342342;
+console.log(num1);
+let isLoggedIn = false;
+console.log(isLoggedIn);

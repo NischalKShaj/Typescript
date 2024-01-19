@@ -1,4 +1,5 @@
-var user = {
+"use strict";
+let user = {
     name: "Nischal",
     age: 21,
 };
