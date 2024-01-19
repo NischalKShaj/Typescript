@@ -46,9 +46,22 @@ function consoleError(errmsg: string): void {
   console.log(errmsg);
 }
 
-// use of never mainly used to handle errors
-function handleError(errmsg: string): never {
-  throw new Error(errmsg);
-}
+consoleError("error");
 
-export {};
+// use of never mainly used to handle errors
+// function handleError(errmsg: string): never {
+//   throw new Error(errmsg);
+// }
+// handleError("error solved");
+
+// testing one more funciton
+function calculateTax(income: number, taxYear = 2022): number {
+  if (taxYear < 2022) {
+    return income * 2;
+  }
+  return income * 3;
+}
+console.log(calculateTax(10_000));
+console.log(calculateTax(20_000, 2023));
+
+
