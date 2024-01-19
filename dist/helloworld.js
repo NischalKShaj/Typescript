@@ -10,5 +10,9 @@ console.log("Hello world");
 let employee = {
   id: 1,
   name: "Nischal",
+  retire: (date) => {
+    console.log(date);
+  },
 };
+employee.retire(new Date());
 console.log(employee.name);
