@@ -19,5 +19,5 @@ let employee: {
     console.log(date);
   },
 };
-employee.retire(new Date())
+employee.retire(new Date());
 console.log(employee.name);
