@@ -30,3 +30,28 @@ let dbConnect = (val1, val2) => {
 };
 let detail = dbConnect(1, { id: 123, name: "Nischal" });
 console.log(detail);
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
+const quizSeller = new Sellable();
+const courseSeller = new Sellable();
+const qProduct = {
+    name: "Leetcode",
+    score: 50,
+    type: "Coding Challenge",
+};
+const cProduct = {
+    name: "Coding with mosh",
+    author: "Mosh Hamedani",
+    duration: "3 weeks",
+    subject: "Typescript",
+};
+quizSeller.addToCart(qProduct);
+courseSeller.addToCart(cProduct);
+console.log(quizSeller.cart);
+console.log(courseSeller.cart);

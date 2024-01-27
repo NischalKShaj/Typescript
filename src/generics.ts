@@ -44,3 +44,44 @@ let dbConnect = <T, U extends Database>(val1: T, val2: U): object => {
 };
 let detail = dbConnect(1, { id: 123, name: "Nischal" });
 console.log(detail);
+
+// generic class //
+interface Quiz {
+  name: string;
+  score: number;
+  type: string;
+}
+
+interface Course {
+  name: string;
+  author: string;
+  duration: string | number;
+  subject: string;
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}
+
+const quizSeller = new Sellable<Quiz>();
+const courseSeller = new Sellable<Course>();
+
+const qProduct: Quiz = {
+  name: "Leetcode",
+  score: 50,
+  type: "Coding Challenge",
+};
+const cProduct: Course = {
+  name: "Coding with mosh",
+  author: "Mosh Hamedani",
+  duration: "3 weeks",
+  subject: "Typescript",
+};
+quizSeller.addToCart(qProduct);
+courseSeller.addToCart(cProduct);
+
+console.log(quizSeller.cart);
+console.log(courseSeller.cart);
